@@ -1,4 +1,5 @@
 # FASTKs
+<<<<<<< HEAD
 Pipeline for generate Ks plots of transcriptome data.
 =============
 
@@ -63,4 +64,3 @@ run_kspipeline.sh
 
 run_mclust.r
 	
-
