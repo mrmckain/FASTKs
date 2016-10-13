@@ -1,5 +1,4 @@
 # FASTKs
-<<<<<<< HEAD
 Pipeline for generate Ks plots of transcriptome data.
 =============
 
