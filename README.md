@@ -1,5 +1,5 @@
 # FASTKs
-Pipeline for generate Ks plots of transcriptome data.
+Pipeline for generating Ks plots of transcriptome data
 =============
 
 <b>Author History</b>:
