@@ -89,9 +89,7 @@ FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournal
 
 In addition, the following should be cited:
 
-<a href="http://nar.oxfordjournals.org/content/34/suppl_2/W609.long"><b>Suyama M, Torrents D, Bork P. 2006. PAL2NAL: robust conversion of
-protein sequence alignments into the corresponding codon alignments.
-Nucleic Acids Res. 34:W609–W612.<b></a>
+<a href="http://nar.oxfordjournals.org/content/34/suppl_2/W609.long"><b>Suyama M, Torrents D, Bork P. 2006. PAL2NAL: robust conversion of protein sequence alignments into the corresponding codon alignments. Nucleic Acids Res. 34:W609–W612.<b></a>
 
 <a href="http://mbe.oxfordjournals.org/content/24/8/1586.abstract"><b>Yang Z. 2007. PAML 4: phylogenetic analysis by maximum likelihood. Mol Biol Evol. 24:1586–1591.</b></a>
 
