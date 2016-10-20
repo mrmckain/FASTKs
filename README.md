@@ -85,17 +85,17 @@ runmclust(ksfile,comp,species)
 
 <h4>Citing</h4>
 
-FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournals.org/content/8/4/1150.long"><b>McKain et al. 2016. A Phylogenomic Assessment of Ancient Polyploidy and Genome Evolution across the Poales. Genome Biology and Evolution 8(4):1150-1164.</b></a>
+FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournals.org/content/8/4/1150.long">McKain et al. 2016. A Phylogenomic Assessment of Ancient Polyploidy and Genome Evolution across the Poales. Genome Biology and Evolution 8(4):1150-1164.</a>
 
 In addition, the following should be cited:
 
-<a href="http://nar.oxfordjournals.org/content/34/suppl_2/W609.long"><b>Suyama M, Torrents D, Bork P. 2006. PAL2NAL: robust conversion of protein sequence alignments into the corresponding codon alignments. Nucleic Acids Res. 34:W609–W612.<b></a>
+<a href="http://nar.oxfordjournals.org/content/34/suppl_2/W609.long">Suyama M, Torrents D, Bork P. 2006. PAL2NAL: robust conversion of protein sequence alignments into the corresponding codon alignments. Nucleic Acids Res. 34:W609–W612.</a>
 
-<a href="http://mbe.oxfordjournals.org/content/24/8/1586.abstract"><b>Yang Z. 2007. PAML 4: phylogenetic analysis by maximum likelihood. Mol Biol Evol. 24:1586–1591.</b></a>
+<a href="http://mbe.oxfordjournals.org/content/24/8/1586.abstract">Yang Z. 2007. PAML 4: phylogenetic analysis by maximum likelihood. Mol Biol Evol. 24:1586–1591.</a>
 
 If using the R script for normal mixture modeling, cite:
 
-<a href="https://www.stat.washington.edu/raftery/Research/PDF/fraley2002.pdf"><b>Fraley C, Raftery AE. 2002. Model-based clustering, discriminant analysis, and density estimation. J Am Stat Assoc. 97:611–631.</b></a>
+<a href="https://www.stat.washington.edu/raftery/Research/PDF/fraley2002.pdf">Fraley C, Raftery AE. 2002. Model-based clustering, discriminant analysis, and density estimation. J Am Stat Assoc. 97:611–631.<</a>
 
-<a href="https://www.stat.washington.edu/research/reports/2012/tr597.pdf"><b>Fraley C, Raftery AE, Murphy TB, Scrucca L. 2012. mclust Version 4 for R: normal mixture modeling for model-based clustering, classification, and density estimation.</b></a>
+<a href="https://www.stat.washington.edu/research/reports/2012/tr597.pdf">Fraley C, Raftery AE, Murphy TB, Scrucca L. 2012. mclust Version 4 for R: normal mixture modeling for model-based clustering, classification, and density estimation.</a>
 	
