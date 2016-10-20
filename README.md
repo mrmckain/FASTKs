@@ -85,7 +85,7 @@ runmclust(ksfile,comp,species)
 
 <h4>Citing</h4>
 
-FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournals.org/content/8/4/1150.long"><b>McKain et al. 2016. A Phylogenomic Assessment of Ancient Polyploidy and Genome Evolution across the Poales. Genome Biology and Evolution 8(4):1150-1164.</a>
+FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournals.org/content/8/4/1150.long"><b>McKain et al. 2016. A Phylogenomic Assessment of Ancient Polyploidy and Genome Evolution across the Poales. Genome Biology and Evolution 8(4):1150-1164.</b></a>
 
 In addition, the following should be cited:
 
