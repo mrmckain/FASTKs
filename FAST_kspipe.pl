@@ -92,7 +92,7 @@ TASKS:
 for my $task (@tasks){
 
 	$pm->start and next TASKS;
-	`perl ~/bin/FAST_kspipe_part2.pl $qsho $ssho $task.set.txt $infile $hitfile`;
+	`perl FASTKs/bin/FAST_kspipe_part2.pl $qsho $ssho $task.set.txt $infile $hitfile`;
 
 	$pm->finish;
 }

@@ -146,7 +146,7 @@ sub run_muscle {
 }
 #####################################
 sub run_pal2nal {
-	system "perl ~/bin/pal2nal.v14/pal2nal.pl $qsho\_$ssho\_ks/set$setid\/$_[0].pep.muscle.fsa $qsho\_$ssho\_ks/set$setid\/$_[0].cdna -output fasta > $qsho\_$ssho\_ks/set$setid\/$_[0].p2n.fasta";
+	system "perl FASTKs/bin/pal2nal.pl $qsho\_$ssho\_ks/set$setid\/$_[0].pep.muscle.fsa $qsho\_$ssho\_ks/set$setid\/$_[0].cdna -output fasta > $qsho\_$ssho\_ks/set$setid\/$_[0].p2n.fasta";
 }
 #####################################
 sub create_phyml_aln {
@@ -182,7 +182,7 @@ sub run_paml {
     	seqfile = $_[0].p2n.phy 
     	outfile = $_[0].codeml.out
         `;
-    my $codeml_args = `cat ~/bin/codeml.ctl.static`;
+    my $codeml_args = `cat FASTKs/bin/codeml.ctl.static`;
     open my $codeml, ">", "$_[0].codeml.ctl" or die "Can't open CODEML";
     print $codeml "$file_args";
     print $codeml "$codeml_args";

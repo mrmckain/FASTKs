@@ -17,11 +17,16 @@ FASTKs estimates pairwise Ks, Ka, and Ka/Ks values for transcriptome datasets. F
 
 <h4>Requirements</h4>
 
+All required software and the FASTKs directory are expected to be in the user's path.
+
 BLAST+ and <a href="http://abacus.gene.ucl.ac.uk/software/paml.html"><b>PAML</b></a>.
+
+The program <a href="https://www.ncbi.nlm.nih.gov/pubmed/16845082"><b>PAL2NALv14</b></a> is packaged with FASTKs.
 
 The Perl module Parallel::ForkManager.
 
 The included R script for normal mixture modeling and producing a Ks frequency plot requires <a hre="http://www.stat.washington.edu/mclust/"><b>mclust</b></a>.
+
 
 <h4>Input</h4>
 
@@ -49,17 +54,54 @@ perl FAST_kspipe.pl --query CDS_file --subject CDS_file --blast blast_output [op
 
 <b>Options:</b>
          
-	-query    		First transcriptome dataset for Ks plot estimation. 
-	-subject    			Second transcriptome dataset for Ks plot estimation.  If the user wants to estimate Ks for paralogs, the query file should also be used here. 
-	-blast_output     		blastn output file in tabular format. Files should be make using blastn and the -outfmt 6 option. The query file (above) should be used to query a database made from the subject file (above).
-	-pairs     	Total number of unique pairs to be included in sets that are passed to ForkManager. The more processors you use the lower this number can be, and the faster FASTKs will finish. [Default = 500]
-	-perid    			Minimum percent identify acceptable to pass a putative pair. [Default = 40]
-	-alen			Minimum alignment length with a transcipt pair. [Default = 100]
-	-processes	Total number of processors to be used for ForkManager. [Default = 2]
+	-query          First transcriptome dataset for Ks plot estimation. 
+	-subject        Second transcriptome dataset for Ks plot estimation.  If the user wants to estimate Ks for paralogs, the query file should also be used here. 
+	-blast_output   Blastn output file in tabular format. Files should be make using blastn and the -outfmt 6 option. The query file (above) should be used to query a database made from the subject file (above).
+	-pairs          Total number of unique pairs to be included in sets that are passed to ForkManager. The more processors you use the lower this number can be, and the faster FASTKs will finish. [Default = 500]
+	-perid          Minimum percent identify acceptable to pass a putative pair. [Default = 40]
+	-alen           Minimum alignment length with a transcipt pair. [Default = 100]
+	-processes      Total number of processors to be used for ForkManager. [Default = 2]
 
 <h4>Other Scripts</h4>
 
-run_kspipeline.sh
+<b>Batch Paralog Ks Frequency Plot Estimation</b>
 
-run_mclust.r
+<h5>Usage/<h5>
+./run_kspipeline.sh
+
+	Script must be run from a directory that has CDS and peptide files for transcriptomes. Files should be in the format AAA.cdna and AAA.pep. Any number of these files can be in the directory.  This script will create subdirectories for each pair, run blastn (expects BLAST+ to be in path), and then run FASTKs.
+
+<b>R Function for Estimating Normal Mixtures and Plotting with Ks Frequency Plot</b>
+
+<h5>Usage</h5>
+
+Load script run_mclust.r in R.  If user wants to run command line, additions need to be made. 
+
+runmclust(ksfile,comp,species)
+	
+	-ksfile          Path to XXX_YYY.kaks.txt output from FASTKs.
+	-comp			 Number of components for mixture modeling. Recommendation: [4]
+	-species		 Taxon name to be used as main title of plot.
+
+<h4>Citing</h4>
+
+FASTKs can be cited through this repository or <a href="http://gbe.oxfordjournals.org/content/8/4/1150.long"><b>McKain et al. 2016. A Phylogenomic Assessment of Ancient Polyploidy and Genome Evolution across the Poales. Genome Biology and Evolution 8(4):1150-1164.
+
+In addition, the following should be cited:
+
+<a href="http://nar.oxfordjournals.org/content/34/suppl_2/W609.long"><b>Suyama M, Torrents D, Bork P. 2006. PAL2NAL: robust conversion of
+protein sequence alignments into the corresponding codon alignments.
+Nucleic Acids Res. 34:W609–W612.<b></a>
+
+<a href="http://mbe.oxfordjournals.org/content/24/8/1586.abstract"><b>Yang Z. 2007. PAML 4: phylogenetic analysis by maximum likelihood. Mol
+Biol Evol. 24:1586–1591.</b></a>
+
+If using the R script for normal mixture modeling, cite:
+
+<a href="https://www.stat.washington.edu/raftery/Research/PDF/fraley2002.pdf"><b>Fraley C, Raftery AE. 2002. Model-based clustering, discriminant analysis,
+and density estimation. J Am Stat Assoc. 97:611–631.</b></a>
+
+<a href="https://www.stat.washington.edu/research/reports/2012/tr597.pdf"><b>Fraley C, Raftery AE, Murphy TB, Scrucca L. 2012. mclust Version 4 for R:
+normal mixture modeling for model-based clustering, classification,
+and density estimation.</b></a>
 	
