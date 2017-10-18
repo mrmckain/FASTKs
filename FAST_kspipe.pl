@@ -130,7 +130,13 @@ sub get_quality_pairs_ORIG {
         while(<$qfile>){
                 chomp;
                 if(/>/){
-                        $temp_seqid = substr($_, 1);
+			if(/\s/){
+				/>(.*?)\s/;
+				$temp_seqid = $1;
+			}
+			else{
+                        	$temp_seqid = substr($_, 1);
+			}
                 }
                 else{
                         $qseqs{$temp_seqid}.=$_;
@@ -140,7 +146,13 @@ sub get_quality_pairs_ORIG {
         while(<$sfile>){
                 chomp;
                 if(/>/){
-                        $temp_seqid = substr($_, 1);
+                        if(/\s/){
+				/>(.*?)\s/;
+				$temp_seqid = $1;
+			}
+			else{
+                        	$temp_seqid = substr($_, 1);
+			}
                 }
                 else{
                         $sseqs{$temp_seqid}.=$_;
