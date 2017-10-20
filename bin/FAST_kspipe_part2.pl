@@ -69,7 +69,13 @@ sub subset_seqs {
 		while(<$qin>){
 			chomp;
 			if(/^>/){
-				$seqid = substr($_, 1);
+				if(/\s/){
+					/>(.*?)\s/;
+					$temp_seqid = $1;
+				}
+				else{
+					$seqid = substr($_, 1);
+				}
 			}
 			else{
 				$fullq{$seqid}.=$_;
@@ -80,7 +86,13 @@ sub subset_seqs {
 		while(<$sin>){
 			chomp;
 			if(/^>/){
-				$seqid = substr($_, 1);
+				if(/\s/){
+					/>(.*?)\s/;
+					$temp_seqid = $1;
+				}
+				else{
+					$seqid = substr($_, 1);
+				}
 			}
 			else{
 				$fulls{$seqid}.=$_;
@@ -91,7 +103,14 @@ sub subset_seqs {
 		while(<$pqin>){
 			chomp;
 			if(/^>/){
-				$seqid = substr($_, 1);
+				if(/\s/){
+					/>(.*?)\s/;
+					$temp_seqid = $1;
+				
+				}
+				else{
+					$seqid = substr($_, 1);
+				}
 			}
 			else{
 				$fullpq{$seqid}.=$_;
@@ -103,7 +122,13 @@ sub subset_seqs {
 		while(<$psin>){
 			chomp;
 			if(/^>/){
-				$seqid = substr($_, 1);
+				if(/\s/){
+					/>(.*?)\s/;
+					$temp_seqid = $1;
+				}
+				else{
+					$seqid = substr($_, 1);
+				}
 			}
 			else{
 				$fullps{$seqid}.=$_;
