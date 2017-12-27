@@ -71,7 +71,7 @@ sub subset_seqs {
 			if(/^>/){
 				if(/\s/){
 					/>(.*?)\s/;
-					$temp_seqid = $1;
+					$seqid = $1;
 				}
 				else{
 					$seqid = substr($_, 1);
@@ -88,7 +88,7 @@ sub subset_seqs {
 			if(/^>/){
 				if(/\s/){
 					/>(.*?)\s/;
-					$temp_seqid = $1;
+					$seqid = $1;
 				}
 				else{
 					$seqid = substr($_, 1);
@@ -105,7 +105,7 @@ sub subset_seqs {
 			if(/^>/){
 				if(/\s/){
 					/>(.*?)\s/;
-					$temp_seqid = $1;
+					$seqid = $1;
 				
 				}
 				else{
@@ -124,7 +124,7 @@ sub subset_seqs {
 			if(/^>/){
 				if(/\s/){
 					/>(.*?)\s/;
-					$temp_seqid = $1;
+					$seqid = $1;
 				}
 				else{
 					$seqid = substr($_, 1);
